@@ -27,7 +27,52 @@
 
       <section>
         <h2>Фильтры шаблонов</h2>
-        <!-- Здесь будет форма для фильтров -->
+        <form action="https://echo.htmlacademy.ru" method="get">
+          <fieldset>
+            <legend>Сетка:</legend>
+            <ul>
+              <li>
+                <input type="radio" name="layout" value="adaptive" id="filter-adaptive" checked>
+                <label for="filter-adaptive">Адаптивная</label>
+              </li>
+              <li>
+                <input type="radio" name="layout" value="fixed" id="filter-fixed">
+                <label for="filter-fixed">Фиксированная</label>
+              </li>
+              <li>
+                <input type="radio" name="layout" value="fluid" id="filter-fluid">
+                <label for="filter-fluid">Резиновая</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Особенности:</legend>
+            <ul>
+              <li>
+                <input type="checkbox" name="slider" id="filter-slider" checked>
+                <label for="filter-slider">Слайдер</label>
+              </li>
+              <li>
+                <input type="checkbox" name="advantages-block" id="filter-advantages-block">
+                <label for="filter-advantages-block">Блок преимуществ</label>
+              </li>
+              <li>
+                <input type="checkbox" name="news" id="filter-news" checked>
+                <label for="filter-news">Новости</label>
+              </li>
+              <li>
+                <input type="checkbox" name="gallery" id="filter-gallery">
+                <label for="filter-gallery">Галерея</label>
+              </li>
+              <li>
+                <input type="checkbox" name="shopping-cart" id="filter-shopping-cart">
+                <label for="filter-shopping-cart">Корзина</label>
+              </li>
+            </ul>
+          </fieldset>
+          <button type="submit">Показать</button>
+        </form>
+
       </section>
 
       <section>
@@ -130,5 +175,26 @@
       <p>Давайте дружить, это выгодно!</p>
       <p>Скидка 10% для друзей из социальных сетей.</p>
     </footer>
+
+    <section>
+      <h2>Напишите нам</h2>
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <p>
+          <label for="feedback-name">Ваше имя:</label>
+          <input id="feedback-name" type="text" name="name" placeholder="Имя Фамилия">
+        </p>
+        <p>
+          <label for="feedback-email">Ваш email:</label>
+          <input id="feedback-email" type="email" name="email" placeholder="email@example.com">
+        </p>
+        <p>
+          <label for="feedback-message">Текст письма:</label>
+          <textarea id="feedback-message" name="message" placeholder="В свободной форме"></textarea>
+        </p>
+        <button type="submit">Отправить</button>
+      </form>
+      <button type="button">Закрыть</button>
+    </section>
+    
 </body>
 </html>
