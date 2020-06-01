@@ -81,6 +81,27 @@ img {
   height: auto;
 }
 
+/*Grid*/
+.page {
+  height: 100%;
+}
+
+.page-body {
+  min-height: 100%;
+
+  display: -ms-grid;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+}
+
+/* Container */
+.container {
+  width: 1160px;
+
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 /*Buttons*/
 .button {
   line-height: 18px;
@@ -88,6 +109,7 @@ img {
   text-transform: uppercase;
   color: var(--basic-white);
   background-color: var(--basic-red-light);
+
   border: none;
 }
 
@@ -170,21 +192,62 @@ img {
   color: var(--basic-black);
 }
 
+/*Header*/
+.page-header {
+  background-color: var(--basic-gray-light);
+}
+
+.page-header .container {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
 /*Navigation*/
 .main-navigation {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+
   line-height: 30px;
   font-weight: 500;
   text-transform: uppercase;
   color: var(--basic-black);
-  background-color: var(--basic-gray-light);
+}
+
+.logo {
+  width: 160px;
+  height: 66px;
 }
 
 .logo[href]:active path{
   fill: var(--svg-gray);
 }
 
+
 .site-navigation {
+  width: 640px;
+
+  margin: 0;
+  padding: 0;
+
   list-style: none;
+}
+
+.user-navigation {
+  max-width: 200px;
+}
+
+.user-navigation a {
+  padding-left: 50px;
 }
 
 .site-navigation a:visited,
@@ -217,14 +280,34 @@ img {
 
 /*Products*/
 .product-list {
+  margin: 0;
+  padding: 0;
+
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+
   list-style: none;
 }
 
 .product-item {
+  width: 300px;
+
+  margin-top: 80px;
+  margin-bottom: 80px;
+  margin-right: 100px;
+
   text-align: left;
 }
 
+.product-item:nth-child(3n) {
+  margin-right: 60px;
+}
+
 .product-item h3{
+  margin: 0;
+
   font-size: 24px;
   line-height: 30px;
   font-weight: bold;
@@ -310,19 +393,44 @@ img {
 
 /*Title*/
 .page-title-wrapper {
-  text-align: center;
   background-color: var(--basic-gray-light);
+
+  border-top: 1px solid var(--basic-gray-light);
+  border-bottom: 1px solid var(--basic-gray-light);
 }
 
 .page-title {
+  margin-top: 71px;
+  margin-bottom: 107px;
+
   font-size: 55px;
   line-height: 55px;
   font-weight: 500;
   color: var(--basic-black);
+
+  text-align: center;
+}
+
+/*Catalog-grid*/
+.catalog-wrapper {
+  display: -ms-grid;
+  display: grid;
+
+  grid-template-columns: 260px 1fr;
 }
 
 /*Filters*/
+.filters-form fieldset {
+  margin: 0;
+  margin-bottom: 50px;
+  padding: 0;
+
+  border: none;
+}
+
 .filters-form legend {
+  margin-bottom: 16px;
+
   font-size: 18px;
   line-height: 30px;
   font-weight: bold;
@@ -331,7 +439,10 @@ img {
 }
 
 .filters-form ul {
-  line-height: 19px;
+  margin: 0;
+  padding: 0;
+
+  line-height: 33px;
   list-style: none;
 }
 
@@ -354,7 +465,14 @@ img {
 }
 
 /*Templates*/
+.templates {
+  margin-left: 140px;
+}
+
 .templates ul {
+  margin: 0;
+  padding: 0;
+
   list-style: none;
 }
 
@@ -398,9 +516,56 @@ img {
   fill: var(--svg-gray-dark);
 }
 
+.templates-list {
+  display: -ms-grid;
+  display: grid;
+
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+
+  -webkit-column-gap: 40px;
+  column-gap: 40px;
+  row-gap: 30px;
+}
+
+.templates-list li {
+  width: 360px;
+  height: 580px;
+}
 
 .template-description {
   display: none;
+
+  text-align: center;
+  background-color: var(--basic-gray-light);
+}
+
+.template-name {
+  margin: 0;
+
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.template-name a:link,
+.template-name a:visited {
+  color: var(--basic-black);
+}
+
+.template-name a:hover,
+.template-name a:focus {
+  color: var(--basic-red-light);
+}
+
+.template-name a:active {
+  color: var(--basic-black-transparent);
+}
+
+.template-description p {
+  line-height: 18px;
+  color: var(--basic-gray);
 }
 
 /*Templates-pagination*/
@@ -410,6 +575,13 @@ img {
 }
 
 /*Footer*/
+.page-footer {
+  display: -ms-grid;
+  display: grid;
+
+  grid-template-columns: 260px 1fr;
+}
+
 .footer-social ul{
   list-style: none;
 }
@@ -430,14 +602,20 @@ img {
   fill: var(--basic-white-transparent);
 }
 
+.footer-text {
+  margin-left: 140px;
+}
+
 .footer-slogan {
+  margin: 0;
+
   font-size: 36px;
   line-height: 36px;
   font-weight: bold;
   color: var(--basic-black);
 }
 
-footer p {
+.page-footer p {
   line-height: 22px;
   color: var(--basic-gray-dark);
 }
