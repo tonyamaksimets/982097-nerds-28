@@ -28,14 +28,16 @@
 
     <main>
       <div class="page-title-wrapper">
-        <h1 class="page-title container">Магазин готовых шаблонов</h1>
+        <div class="container">
+          <h1 class="page-title">Магазин готовых шаблонов</h1>
+        </div>
       </div>
 
       <div class="catalog-wrapper container">
         <section class="filters">
           <h2 class="visually-hidden">Фильтры шаблонов</h2>
           <form class="filters-form" action="https://echo.htmlacademy.ru" method="get">
-            <fieldset>
+            <fieldset class="filters-cost">
               <legend>Стоимость:</legend>
               <!-- Здесь будет блок с ползунками -->
               <p>
@@ -47,7 +49,7 @@
                 <input class="filter-input-text" id="filter-max-cost" type="text" name="max-cost" value="15 000">
               </p>
             </fieldset>
-            <fieldset>
+            <fieldset class="filters-layout">
               <legend>Сетка:</legend>
               <ul>
                 <li>
@@ -64,7 +66,7 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset>
+            <fieldset class="filters-features">
               <legend>Особенности:</legend>
               <ul>
                 <li>
@@ -129,7 +131,7 @@
 
           <ul class="templates-list">
             <li>
-              <article>
+              <article class="template">
                 <img src="img/template-sedona.jpg" width="360" height="576" alt="Шаблон «Sedona»">
                 <div class="template-description">
                   <h3 class="template-name"><a href="template-sedona.html">Sedona</a></h3>
@@ -139,7 +141,7 @@
               </article>
             </li>
             <li>
-              <article>
+              <article class="template">
                 <img src="img/template-pinkapp.jpg" width="360" height="576" alt="Шаблон «Pink App»">
                 <div class="template-description">
                   <h3 class="template-name"><a href="template-pinkapp.html">Pink App</a></h3>
@@ -149,7 +151,7 @@
               </article>
             </li>
             <li>
-              <article>
+              <article class="template">
                 <img src="img/template-barbershop.jpg" width="364" height="582" alt="Шаблон «Barbershop»">
                 <div class="template-description">
                   <h3 class="template-name"><a href="template-barbershop.html">Barbershop</a></h3>
@@ -159,7 +161,7 @@
               </article>
             </li>
             <li>
-              <article>
+              <article class="template">
                 <img src="img/template-mishka.jpg" width="362" height="580" alt="Шаблон «MISHKA»">
                 <div class="template-description">
                   <h3 class="template-name"><a href="template-mishka.html">MISHKA</a></h3>
@@ -169,7 +171,7 @@
               </article>
             </li>
             <li>
-              <article>
+              <article class="template">
                 <img src="img/template-aplus.jpg" width="364" height="582" alt="Шаблон «A Plus»">
                 <div class="template-description">
                   <h3 class="template-name"><a href="template-aplus.html">A Plus</a></h3>
@@ -179,7 +181,7 @@
               </article>
             </li>
             <li>
-              <article>
+              <article class="template">
                 <img src="img/template-kvast.jpg" width="362" height="580" alt="Шаблон «КВАСТ»">
                 <div class="template-description">
                   <h3 class="template-name"><a href="template-kvast.html">КВАСТ</a></h3>
@@ -192,16 +194,16 @@
 
           <ul class="pagination"> <!-- Пагинация -->
             <li>
-              <a class="button button-gray active-page">1</a>
+              <a class="button button-gray page-number active-page">1</a>
             </li>
             <li>
-              <a class="button button-gray" href="#">2</a>
+              <a class="button button-gray page-number" href="#">2</a>
             </li>
             <li>
-              <a class="button button-gray" href="#">3</a>
+              <a class="button button-gray page-number" href="#">3</a>
             </li>
             <li>
-              <a class="button button-gray" href="#">Следующая</a>
+              <a class="button button-gray page-next" href="#">Следующая</a>
             </li>
           </ul>
         </section>
@@ -228,7 +230,7 @@
     <footer class="page-footer container">
       <section class="footer-social">
         <h2 class="visually-hidden">Мы в социальных сетях</h2>
-        <ul>
+        <ul class="social-list">
           <li>
             <a href="#" class="social-button">
               <span class="visually-hidden">Вконтакте</span>
@@ -258,22 +260,24 @@
 
     <section class="feedback">
       <h2>Напишите нам</h2>
-      <form action="https://echo.htmlacademy.ru" method="post">
-        <p>
-          <label for="feedback-name">Ваше имя:</label>
-          <input id="feedback-name" type="text" name="name" placeholder="Имя Фамилия">
-        </p>
-        <p>
-          <label for="feedback-email">Ваш email:</label>
-          <input id="feedback-email" type="email" name="email" placeholder="email@example.com">
-        </p>
-        <p>
-          <label for="feedback-message">Текст письма:</label>
-          <textarea id="feedback-message" name="message" placeholder="В свободной форме"></textarea>
-        </p>
-        <button type="submit">Отправить</button>
+      <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+        <div>
+          <p>
+            <label for="feedback-name">Ваше имя:</label>
+            <input id="feedback-name" type="text" name="name" placeholder="Имя Фамилия">
+          </p>
+          <p>
+            <label for="feedback-email">Ваш email:</label>
+            <input id="feedback-email" type="email" name="email" placeholder="email@example.com">
+          </p>
+          <p>
+            <label for="feedback-message">Текст письма:</label>
+            <textarea id="feedback-message" name="message" placeholder="В свободной форме"></textarea>
+          </p>
+        </div>
+        <button class="button" type="submit">Отправить</button>
       </form>
-      <button type="button">Закрыть</button>
+      <button class="close-button" type="button"><span class="visually-hidden">Закрыть</span></button>
     </section>
 
 </body>

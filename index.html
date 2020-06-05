@@ -19,9 +19,9 @@
           <li><a href="catalog-bycost-ascending.html">Магазин</a></li>
           <li><a href="contacts.html">Контакты</a></li>
         </ul>
-        
+
         <div class="user-navigation">
-          <a href="shoppingcart.html">Корзина</a>
+          <a class="shoppingcart" href="shoppingcart.html">Корзина</a>
         </div>
       </nav>
     </header>
@@ -71,7 +71,7 @@
         </div>
       </section>
 
-      <section class="container">
+      <section class="products container">
         <h2 class="visually-hidden">Продукты</h2>
         <ul class="product-list">
           <li class="product-item">
@@ -174,7 +174,7 @@
     <footer class="page-footer container">
       <section class="footer-social">
         <h2 class="visually-hidden">Мы в социальных сетях</h2>
-        <ul>
+        <ul class="social-list">
           <li>
             <a href="#" class="social-button">
               <span class="visually-hidden">Вконтакте</span>
@@ -204,22 +204,24 @@
 
     <section class="feedback">
       <h2>Напишите нам</h2>
-      <form action="https://echo.htmlacademy.ru" method="post">
-        <p>
-          <label for="feedback-name">Ваше имя:</label>
-          <input id="feedback-name" type="text" name="name" placeholder="Имя Фамилия">
-        </p>
-        <p>
-          <label for="feedback-email">Ваш email:</label>
-          <input id="feedback-email" type="email" name="email" placeholder="email@example.com">
-        </p>
-        <p>
-          <label for="feedback-message">Текст письма:</label>
-          <textarea id="feedback-message" name="message" placeholder="В свободной форме"></textarea>
-        </p>
-        <button type="submit">Отправить</button>
+      <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+        <div>
+          <p>
+            <label for="feedback-name">Ваше имя:</label>
+            <input id="feedback-name" type="text" name="name" placeholder="Имя Фамилия">
+          </p>
+          <p>
+            <label for="feedback-email">Ваш email:</label>
+            <input id="feedback-email" type="email" name="email" placeholder="email@example.com">
+          </p>
+          <p>
+            <label for="feedback-message">Текст письма:</label>
+            <textarea id="feedback-message" name="message" placeholder="В свободной форме"></textarea>
+          </p>
+        </div>
+        <button class="button" type="submit">Отправить</button>
       </form>
-      <button type="button">Закрыть</button>
+      <button class="close-button" type="button"><span class="visually-hidden">Закрыть</span></button>
     </section>
 
   </body>
