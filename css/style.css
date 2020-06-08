@@ -45,6 +45,8 @@
 
   --shadow-black-transparent: rgba(0, 0, 0, 0.4);
 
+  --slider-gray: #c1c1c1;
+
   --sort-black-transparent: rgba(0,0,0,0.6);
 
   --svg-gray: #a6a6a6;
@@ -330,12 +332,19 @@ img {
   list-style: none;
 }
 
+.features .container {
+  position: relative;
+}
+
 .slide {
+  display: none;
+
   padding-top: 78px;
   padding-bottom: 80px;
 
   background-repeat: no-repeat;
-  background-position: right bottom;
+  background-position-x: 397px;
+  background-position-y: bottom;
 }
 
 .slide:nth-child(1) {
@@ -348,6 +357,10 @@ img {
 
 .slide:nth-child(3) {
   background-image: url(../img/features-slide3.png);
+}
+
+.current-slide {
+  display: block;
 }
 
 .feature {
@@ -369,10 +382,46 @@ img {
   width: 240px;
 }
 
-/*Products*/
-.product {
-  border-bottom: 2px solid var(--basic-gray-light);
+.slider-controls {
+  width: 88px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  position: absolute;
+  bottom: 88px;
+  left: 556px;
 }
+
+.slider-controls button{
+  width: 18px;
+  height: 18px;
+
+  position: relative;
+
+  background-color: var(--basic-white);
+  border: none;
+  border-radius: 50%;
+}
+
+.current::before {
+  content: '';
+
+  width: 4px;
+  height: 4px;
+
+  display: block;
+
+  position: absolute;
+  top: 5px;
+  left: 5px;
+
+  border: 2px solid var(--slider-gray);
+  border-radius: 50%;
+}
+
+/*Products*/
 .product-list {
   margin: 0;
   padding: 0;
@@ -381,6 +430,7 @@ img {
   justify-content: space-between;
 
   list-style: none;
+  border-bottom: 2px solid var(--basic-gray-light);
 }
 
 .product-item {
@@ -683,37 +733,11 @@ img {
 }
 
 .filters-form .filters-layout {
-  margin-bottom: 43px;
+  margin-bottom: 38px;
 }
 
 .filters-form .filters-features {
-  margin-bottom: 48px;
-}
-
-.filters-layout li {
-  margin-bottom: 15px;
-}
-
-.filters-layout li:last-child {
-  margin-bottom: 0;
-}
-
-.filters-features li {
-  margin-bottom: 17px;
-}
-
-.filters-features li:last-child {
-  margin-bottom: 0;
-}
-
-.filters-form legend {
-  margin-bottom: 14px;
-
-  font-size: 18px;
-  line-height: 30px;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: var(--basic-black);
+  margin-bottom: 42px;
 }
 
 .filters-form ul {
@@ -722,6 +746,34 @@ img {
 
   line-height: 33px;
   list-style: none;
+}
+
+.filters-layout li {
+  margin-bottom: 8px;
+}
+
+.filters-features li {
+  margin-bottom: 7px;
+}
+
+.filters-form li:last-child {
+  margin-bottom: 0;
+}
+
+.filters-form legend {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
+
+.filters-layout legend {
+  margin-bottom: 10px;
+}
+
+.filters-features legend {
+  margin-bottom: 9px;
 }
 
 .cost-label {
@@ -740,6 +792,66 @@ img {
   line-height: 22px;
   text-transform: uppercase;
   background-color: var(--basic-gray-light);
+}
+
+.filter-input-radio + label,
+.filter-input-checkbox + label {
+  padding-left: 36px;
+
+  position: relative;
+
+  line-height: 19px;
+}
+
+.filter-input-radio:not(:checked) + label::before {
+  content: url(../img/radio-off.svg);
+  opacity: 0.4;
+
+  position: absolute;
+  top: -4px;
+  left: 0;
+}
+
+.filter-input-radio:checked + label::after {
+  content: url(../img/radio-on.svg);
+  opacity: 0.4;
+
+  position: absolute;
+  top: -4px;
+  left: 0;
+}
+
+.filter-input-checkbox:not(:checked) + label::before {
+  content: url(../img/checkbox-off.svg);
+  opacity: 0.4;
+
+  position: absolute;
+  top: -4px;
+  left: 0;
+}
+
+.filter-input-checkbox:checked + label::after {
+  content: url(../img/checkbox-on.svg);
+  opacity: 0.4;
+
+  position: absolute;
+  top: -4px;
+  left: 0;
+}
+
+
+.filter-input-radio + label:hover::before,
+.filter-input-radio + label:hover::after,
+.filter-input-checkbox + label:hover::before,
+.filter-input-checkbox + label:hover::after {
+  opacity: 1;
+}
+
+.filter-input-radio:disabled + label::before,
+.filter-input-radio:disabled + label::after,
+.filter-input-checkbox:disabled + label::before,
+.filter-input-checkbox:disabled + label::after {
+  opacity: 0.1;
 }
 
 .filter-input-checkbox:disabled + label,
@@ -997,6 +1109,7 @@ img {
 }
 
 .social-button:hover {
+  outline: none;
   background-color: var(--basic-red);
 }
 
@@ -1040,6 +1153,7 @@ img {
 /*Feedback*/
 .feedback {
   display: none;
+
   width: 760px;
 
   padding-top: 63px;
@@ -1055,6 +1169,10 @@ img {
   box-shadow: 0 20px 40px var(--shadow-black-transparent);
 
   background-color: var(--basic-white);
+}
+
+.open {
+  display: block;
 }
 
 .feedback h2 {
