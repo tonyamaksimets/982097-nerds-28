@@ -21,7 +21,7 @@
         </ul>
 
         <div class="user-navigation">
-          <a href="shoppingcart.html">Корзина</a>
+          <a class="shoppingcart" href="shoppingcart.html">Корзина</a>
         </div>
       </nav>
     </header>
@@ -39,15 +39,25 @@
           <form class="filters-form" action="https://echo.htmlacademy.ru" method="get">
             <fieldset class="filters-cost">
               <legend>Стоимость:</legend>
-              <!-- Здесь будет блок с ползунками -->
-              <p>
-                <label class="cost-label" for="filter-min-cost">От</label>
-                <input class="filter-input-text" id="filter-min-cost" type="text" name="min-cost" value="0">
-              </p>
-              <p>
-                <label class="cost-label" for="filter-max-cost">До</label>
-                <input class="filter-input-text" id="filter-max-cost" type="text" name="max-cost" value="15 000">
-              </p>
+
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar" style="width: 80%; margin-left: 10%"></div>
+                </div>
+                <div class="toggle toggle-min" tabindex="0" style="left: 10%"></div>
+                <div class="toggle toggle-max" tabindex="0" style="right: 10%"></div>
+              </div>
+
+              <div class="number-controls">
+                <p>
+                  <label for="filter-min-cost">От</label>
+                  <input class="filter-input-text" id="filter-min-cost" type="text" name="min-cost" value="0">
+                </p>
+                <p>
+                  <label for="filter-max-cost">До</label>
+                  <input class="filter-input-text" id="filter-max-cost" type="text" name="max-cost" value="15000">
+                </p>
+              </div>
             </fieldset>
             <fieldset class="filters-layout">
               <legend>Сетка:</legend>
@@ -100,8 +110,8 @@
           
           <!-- Блок сортировки -->
           <div class="sort">
-            <p>Сортировать:<p>
-            <ul>
+            <p>Сортировать:</p>
+            <ul class="sort-types">
               <li>
                 <a class="sort-type active-sort-type" href="catalog-bycost-ascending.html">По цене</a>
               </li>
@@ -113,7 +123,7 @@
               </li>
             </ul>
             
-            <ul>
+            <ul class="sort-directions">
               <li>
                 <a class="sort-direction active-sort-direction" href="catalog-bycost-ascending.html">
                   <span class="visually-hidden">По возрастанию</span>
@@ -209,11 +219,11 @@
         </section>
       </div>
 
-      <section class="contacts">
+      <section class="contacts inside-page-contacts">
         <h2 class="visually-hidden">Контактная информация</h2>
         <div class="contacts-map">
           <img src="img/map.png" width="1440" height="416" alt="Карта">
-          <img src="img/map-marker.png" width="231" height="190" alt="Маркер">
+          <img class="map-marker" src="img/map-marker.png" width="231" height="190" alt="Маркер">
         </div>
         <div class="container">
           <div class="contacts-info">
