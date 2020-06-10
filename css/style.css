@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 2 version,not dead,not ie <= 11
+*/
+
 /*Fonts*/
 @font-face {
   font-family: 'Roboto';
@@ -107,6 +114,7 @@ img {
   min-height: 100%;
 
   display: grid;
+  grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
   grid-template-rows: min-content 1fr min-content;
 }
 
@@ -1166,7 +1174,9 @@ img {
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr;
 
-  column-gap: 40px;
+  -moz-column-gap: 40px;
+
+       column-gap: 40px;
   row-gap: 30px;
 
 }
@@ -1212,7 +1222,8 @@ img {
 }
 
 .template img {
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .template-description {
@@ -1454,7 +1465,8 @@ img {
 
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 40px;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
   row-gap: 33px;
 }
 
@@ -1493,6 +1505,14 @@ img {
   height: 118px;
 }
 
+.feedback-form input::-webkit-input-placeholder, .feedback-form textarea::-webkit-input-placeholder {
+  color: var(--basic-gray-dark-transparent);
+}
+
+.feedback-form input::-moz-placeholder, .feedback-form textarea::-moz-placeholder {
+  color: var(--basic-gray-dark-transparent);
+}
+
 .feedback-form input::placeholder,
 .feedback-form textarea::placeholder {
   color: var(--basic-gray-dark-transparent);
@@ -1507,6 +1527,14 @@ img {
 .feedback-form textarea:focus {
   outline: none;
   border-color: var(--basic-black);
+}
+
+.feedback-form input:focus::-webkit-input-placeholder, .feedback-form textarea:focus::-webkit-input-placeholder {
+  color: var(--basic-gray-dark);
+}
+
+.feedback-form input:focus::-moz-placeholder, .feedback-form textarea:focus::-moz-placeholder {
+  color: var(--basic-gray-dark);
 }
 
 .feedback-form input:focus::placeholder,
