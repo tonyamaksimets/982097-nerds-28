@@ -51,11 +51,11 @@
               <div class="number-controls">
                 <p>
                   <label for="filter-min-cost">От</label>
-                  <input class="filter-input-text" id="filter-min-cost" type="text" name="min-cost" value="0">
+                  <input class="filter-input-number" id="filter-min-cost" type="number" name="min-cost" value="0" step="100">
                 </p>
                 <p>
                   <label for="filter-max-cost">До</label>
-                  <input class="filter-input-text" id="filter-max-cost" type="text" name="max-cost" value="15000">
+                  <input class="filter-input-number" id="filter-max-cost" type="number" name="max-cost" value="15000" step="100">
                 </p>
               </div>
             </fieldset>
@@ -113,7 +113,7 @@
             <p>Сортировать:</p>
             <ul class="sort-types">
               <li>
-                <a class="sort-type active-sort-type" href="catalog-bycost-ascending.html">По цене</a>
+                <a class="sort-type active-sort-type">По цене</a>
               </li>
               <li>
                 <a class="sort-type" href="catalog-bytype-ascending.html">По типу</a>
@@ -125,7 +125,7 @@
             
             <ul class="sort-directions">
               <li>
-                <a class="sort-direction active-sort-direction" href="catalog-bycost-ascending.html">
+                <a class="sort-direction active-sort-direction">
                   <span class="visually-hidden">По возрастанию</span>
                   <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path fill="#231F20" d="M5.5 10L0 0h11"/></svg>
                 </a>
@@ -223,11 +223,11 @@
         <h2 class="visually-hidden">Контактная информация</h2>
         <iframe class="contacts-map" src="https://yandex.ru/map-widget/v1/-/CCQdjBEOcB" width="auto" height="416" allowfullscreen="true" title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></iframe>
         <div class="contacts-info">
-            <p class="studio-name">NЁRDS DESIGN STUDIO</p>
-            <p class="studio-address">191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8</p>
-            <a class="studio-telephone" href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
+          <p class="studio-name">NЁRDS DESIGN STUDIO</p>
+          <p class="studio-address">191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8</p>
+          <a class="studio-telephone" href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
 
-            <a class="button" href="feedback.html">Напишите нам</a>
+          <a class="button" href="feedback.html">Напишите нам</a>
         </div>
       </section>
     </main>
@@ -282,7 +282,7 @@
         </div>
         <button class="button" type="submit">Отправить</button>
       </form>
-      <button class="close-button" type="button"><span class="visually-hidden">Закрыть</span></button>
+      <button class="close-button" type="button" aria-label="Закрыть"></button>
     </section>
 
 </body>
