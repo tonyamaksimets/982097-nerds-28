@@ -671,6 +671,7 @@ img {
 .contacts {
   padding-top: 134px;
   padding-bottom: 55px;
+
   position: relative;
 }
 
@@ -680,26 +681,20 @@ img {
 }
 
 .contacts-map {
-  width: 1440px;
+  min-width: 1200px;
+  width: calc(100vw - 40px);
+
   position: absolute;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  z-index: -1;
+  z-index: 1;
+
+  border: none;
 }
 
 .inside-page-contacts .contacts-map {
   top: 0;
-}
-
-.contacts-map img {
-  vertical-align: bottom;
-}
-
-.contacts-map .map-marker {
-  position: absolute;
-  top: 86px;
-  left: 822px;
 }
 
 .contacts-info {
@@ -707,6 +702,9 @@ img {
 
   padding-left: 50px;
   padding-right: 50px;
+
+  position: relative;
+  z-index: 2;
 
   border-top: 1px solid var(--basic-white);
   border-bottom: 1px solid var(--basic-white);
