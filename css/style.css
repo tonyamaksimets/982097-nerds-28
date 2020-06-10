@@ -141,7 +141,6 @@ img {
 
 .button:hover,
 .button:focus {
-  outline: none;
   background-color: var(--basic-red);
 }
 
@@ -284,7 +283,6 @@ img {
 .user-navigation a:hover,
 .site-navigation a:focus,
 .user-navigation a:focus {
-  outline: none;
   color: var(--basic-red-light);
 }
 
@@ -661,7 +659,7 @@ img {
 }
 
 .partners a:hover,
-.partners a:active {
+.partners a:focus {
   opacity: 1;
 }
 
@@ -742,6 +740,15 @@ img {
 .studio-telephone:visited {
   line-height: 18px;
   color: var(--basic-gray);
+}
+
+.studio-telephone:hover {
+  color: var(--basic-gray-dark-transparent);
+}
+
+.studio-telephone:active,
+.studio-telephone:focus {
+  color: var(--basic-gray-dark);
 }
 
 .contacts-info .button {
@@ -983,6 +990,14 @@ img {
   opacity: 1;
 }
 
+.filter-input-radio:focus + label::before,
+.filter-input-radio:focus + label::after,
+.filter-input-checkbox:focus + label::before,
+.filter-input-checkbox:focus + label::after {
+  opacity: 1;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
 .filter-input-radio:disabled + label::before,
 .filter-input-radio:disabled + label::after,
 .filter-input-checkbox:disabled + label::before,
@@ -1178,15 +1193,22 @@ img {
   display: block;
 }
 
-.template:hover {
+.template:focus-within .template-description {
+  display: block;
+}
+
+.template:hover,
+.template:focus-within {
   box-shadow: 0 6px 15px var(--template-shadow);
 }
 
-.template:hover::before {
+.template:hover::before,
+.template:focus-within::before {
   opacity: 1;
 }
 
-.template:hover::after {
+.template:hover::after,
+.template:focus-within::after {
   display: none;
 }
 
@@ -1294,8 +1316,8 @@ img {
   border-radius: 50%;
 }
 
-.social-button:hover {
-  outline: none;
+.social-button:hover,
+.social-button:focus {
   background-color: var(--basic-red);
 }
 
@@ -1461,7 +1483,6 @@ img {
 .close-button:hover,
 .close-button:focus {
   opacity: 1;
-  outline: none;
 }
 
 .close-button:active {
