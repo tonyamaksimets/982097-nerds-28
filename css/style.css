@@ -1103,8 +1103,6 @@ img {
 .sort p {
   margin: 0;
 
-  display: inline-block;
-
   font-size: 18px;
   line-height: 30px;
   font-weight: bold;
@@ -1115,7 +1113,7 @@ img {
 .sort-types {
   width: 490px;
 
-  display: inline-flex;
+  display: flex;
   justify-content: flex-end;
   align-items: center;
 }
@@ -1123,7 +1121,7 @@ img {
 .sort-directions {
   width: 40px;
 
-  display: inline-flex;
+  display: flex;
   justify-content: space-between;
   align-items: center;
 }
@@ -1583,7 +1581,7 @@ img {
   width: 259px;
 }
 
-.feedback-form .button::active {
+.feedback-form .button:active {
   outline: none;
 }
 
