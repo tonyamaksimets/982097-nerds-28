@@ -1467,11 +1467,13 @@ img {
 .open-modal {
   display: block;
 
-  animation: floating 0.6s;
+  -webkit-animation: floating 0.6s;
+          animation: floating 0.6s;
 }
 
 .error-modal {
-  animation: shake 0.6s;
+  -webkit-animation: shake 0.6s;
+          animation: shake 0.6s;
 }
 
 .feedback h2 {
