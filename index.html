@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Дизайн-студия «Нердс»</title>
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="css/style.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body class="page-body">
     <header class="page-header">
@@ -157,7 +157,7 @@
           <p class="studio-address">191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8</p>
           <a class="studio-telephone" href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
 
-          <a class="button" href="feedback.html">Напишите нам</a>
+          <a class="feedback-link button" href="feedback.html">Напишите нам</a>
         </div>
       </section>
     </main>
@@ -199,15 +199,15 @@
         <div>
           <p>
             <label for="feedback-name">Ваше имя:</label>
-            <input id="feedback-name" type="text" name="name" placeholder="Имя Фамилия">
+            <input class="feedback-field-name" id="feedback-name" type="text" name="name" placeholder="Имя Фамилия">
           </p>
           <p>
             <label for="feedback-email">Ваш email:</label>
-            <input id="feedback-email" type="email" name="email" placeholder="email@example.com">
+            <input class="feedback-field-email" id="feedback-email" type="email" name="email" placeholder="email@example.com">
           </p>
           <p>
             <label for="feedback-message">Текст письма:</label>
-            <textarea id="feedback-message" name="message" placeholder="В свободной форме"></textarea>
+            <textarea class="feedback-field-message" id="feedback-message" name="message" placeholder="В свободной форме"></textarea>
           </p>
         </div>
         <button class="button" type="submit">Отправить</button>

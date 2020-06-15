@@ -1459,6 +1459,12 @@ img {
 
 .open-modal {
   display: block;
+
+  animation: floating 0.6s;
+}
+
+.error-modal {
+  animation: shake 0.6s;
 }
 
 .feedback h2 {
@@ -1601,4 +1607,34 @@ img {
   display: block;
 
   background-image: url(../img/close-cross.svg);
+}
+
+
+/*Animations*/
+
+@keyframes floating {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);;
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  20%,
+  60% {
+    transform: translateX(-10px);
+  }
+
+  40%,
+  80% {
+    transform: translateX(10px);
+  }
 }
