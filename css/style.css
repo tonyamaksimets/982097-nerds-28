@@ -1240,18 +1240,18 @@ img {
 .template-description {
   display: none;
 
-  width: 360px;
+  width: 340px;
+
+  padding-right: 10px;
+  padding-bottom: 126px;
+  padding-left: 10px;
 
   position: absolute;
   bottom: 0;
   z-index: 1;
 
-  text-align: center;
-
   background-color: var(--basic-gray-light);
 
-  border-top: 1px solid var(--basic-gray-light);
-  border-bottom: 1px solid var(--basic-gray-light);
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
 }
@@ -1277,6 +1277,16 @@ img {
 .template:hover::after,
 .template:focus-within::after {
   display: none;
+}
+
+.template-description-text {
+  max-height: 452px;
+
+  text-align: center;
+  overflow: auto;
+
+  border-top: 1px solid var(--basic-gray-light);
+  border-bottom: 1px solid var(--basic-gray-light);
 }
 
 .template-name {
@@ -1313,10 +1323,13 @@ img {
 .template-description .button {
   width: 200px;
 
-  margin-top: 32px;
-  margin-bottom: 44px;
   margin-left: auto;
   margin-right: auto;
+
+  position: absolute;
+  bottom: 44px;
+  left: 0;
+  right: 0;
 }
 
 /*Templates-pagination*/
