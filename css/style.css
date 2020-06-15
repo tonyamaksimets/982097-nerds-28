@@ -1192,8 +1192,6 @@ img {
 
   position: relative;
 
-  text-align: center;
-
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
 }
@@ -1226,8 +1224,11 @@ img {
 }
 
 .template img {
-  -o-object-fit: contain;
-     object-fit: contain;
+  height: 580px;
+  width: auto;
+
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .template-description {
