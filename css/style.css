@@ -1611,6 +1611,15 @@ img {
 
 
 /*Animations*/
+@-webkit-keyframes floating {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);;
+  }
+}
 
 @keyframes floating {
   0% {
@@ -1619,6 +1628,23 @@ img {
 
   100% {
     transform: scale(1);;
+  }
+}
+
+@-webkit-keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  20%,
+  60% {
+    transform: translateX(-10px);
+  }
+
+  40%,
+  80% {
+    transform: translateX(10px);
   }
 }
 
