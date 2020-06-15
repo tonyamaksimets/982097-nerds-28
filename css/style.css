@@ -818,8 +818,6 @@ img {
   line-height: 55px;
   font-weight: 500;
   color: var(--basic-black);
-
-  text-align: center;
 }
 
 /*Catalog-grid*/
@@ -847,11 +845,11 @@ img {
 }
 
 .filters-form .filters-layout {
-  margin-bottom: 38px;
+  margin-bottom: 43px;
 }
 
 .filters-form .filters-features {
-  margin-bottom: 43px;
+  margin-bottom: 46px;
 }
 
 .filters-form legend {
@@ -867,29 +865,25 @@ img {
 }
 
 .filters-layout legend {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .filters-features legend {
-  margin-bottom: 9px;
+  margin-bottom: 14px;
 }
 
 .filters-form ul {
   margin: 0;
   padding: 0;
 
-  line-height: 33px;
-
   list-style: none;
 }
 
-.filters-layout li {
-  margin-bottom: 8px;
+.filters-layout li,
+.filters-features li {
+  margin-bottom: 16px;
 }
 
-.filters-features li {
-  margin-bottom: 7px;
-}
 
 .filters-form li:last-child {
   margin-bottom: 0;
@@ -968,10 +962,11 @@ img {
 }
 
 .filter-input-number {
-  width: 80px;
+  width: 62px;
   height: 36px;
 
   margin-left: 10px;
+  padding-left: 15px;
 
   line-height: 22px;
   text-transform: uppercase;
@@ -1333,7 +1328,7 @@ img {
 /*Templates-pagination*/
 .templates .pagination {
   margin-top: 49px;
-  margin-bottom: 56px;
+  margin-bottom: 55px;
 
   display: flex;
   flex-wrap: wrap;
@@ -1428,7 +1423,7 @@ img {
 
 .page-footer .footer-slogan {
   margin: 0;
-  margin-top: 7px;
+  margin-top: 6px;
   margin-bottom: 11px;
 
   font-size: 36px;
@@ -1460,7 +1455,7 @@ img {
   position: fixed;
   left: 0;
   right: 0;
-  bottom: 180px;
+  bottom: 178px;
   z-index: 3;
 
   background-color: var(--basic-white);
@@ -1591,7 +1586,7 @@ img {
 
   position: absolute;
   top: 78px;
-  right: 85px;
+  right: 90px;
 
   background-color: transparent;
 
