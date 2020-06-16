@@ -382,6 +382,10 @@ img {
   display: block;
 }
 
+.feature-slide-text {
+  width: 540px;
+}
+
 .feature {
   margin: 0;
   margin-bottom: 25px;
@@ -503,6 +507,7 @@ img {
 
 .product-item p {
   margin: 0;
+  margin-right: 40px;
 }
 
 .product-item .button {
@@ -1249,11 +1254,11 @@ img {
 .template-description {
   display: none;
 
-  width: 340px;
+  width: 240px;
 
-  padding-right: 10px;
+  padding-right: 60px;
   padding-bottom: 126px;
-  padding-left: 10px;
+  padding-left: 60px;
 
   position: absolute;
   bottom: 0;
