@@ -726,11 +726,25 @@ img {
 }
 
 .contacts-map {
+  margin: 0 auto;
+
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 113px;
+  z-index: 1;
+}
+
+.inside-page-contacts .contacts-map {
+  top: 33px;
+}
+
+.contacts-map iframe {
   min-width: 1200px;
   width: calc(100vw - 40px);
 
   position: absolute;
-  bottom: 0;
+  bottom: -29px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
@@ -738,8 +752,9 @@ img {
   border: none;
 }
 
-.inside-page-contacts .contacts-map {
-  top: 0;
+.contacts-map img {
+  width: 1200px;
+  height: auto;
 }
 
 .contacts-info {
